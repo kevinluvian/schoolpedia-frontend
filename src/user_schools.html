@@ -1,0 +1,218 @@
+<head>
+    <title>SchoolPedia</title>
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="range.js"></script>
+    <link href="range.css" rel="stylesheet" />
+    <link href="semantic.css" rel="stylesheet" />
+    <script src="semantic.js"></script>
+    <script src="package.js"></script>
+    <style type="text/css">
+        body > .ui.container {
+            margin-top: 3em;
+        }
+
+        
+        .ui.container > h1 {
+            font-size: 3em;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .ui.container > h2.dividing.header {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 4em 0em 3em;
+        }
+
+
+        .ui.table {
+            table-layout: fixed;
+        }
+        .ui.cards > .card{
+            width: 270px;
+        }
+        .ui.items > .item > .image > a > img{
+            width:80%;
+        }
+        
+    </style>
+    <!--- Example Javascript -->
+    <script>
+  $(document)
+    .ready(function() {
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active')
+          ;
+        })
+      ;
+      $('.special.cards .image').dimmer({
+          on: 'hover'
+      });
+        // Place value in an input
+      $('#range-2').range({
+          min: 0,
+          max: 10,
+          start: 5,
+          input: '#input-2',
+          onChange: function (value) {
+              $('#display-3').html(value);
+          }
+      });
+      $('.ui.dropdown')
+        .dropdown();
+    }) 
+        ;
+
+  
+    </script>
+</head>
+<body>
+    <div class="ui container">
+
+        <!--HEADER MENU-->
+        <div class="ui secondary menu">
+            <a href="user_home.html"><img src="assets/logo/schoolpedialogo.png" height="60" /></a>
+            <!--<div class="active item">Home</div>-->
+            <a class="item" href="#">Schools</a>
+            <a class="item" href="#">Bookmark</a>
+            <a class="item" href="#">Comparison</a>
+            <a class="item" href="#">FAQ</a>
+            <a class="item" href="#">Contact Us</a>
+            <!--<a class="item inverted">Login</a>-->
+            <div class="item">
+                <a class="ui primary button" href="login.html">Login</a>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui action left icon input">
+                        <i class="search icon"></i>
+                        <input type="text" placeholder="Enter school">
+                        <button class="ui button">Search</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Breadcrumb-->
+        <div class="ui breadcrumb" style="margin-top:2%;width:80%">
+            <a class="section" href="user_home.html">Home</a>
+            <div class="divider"> / </div>
+            <a class="active section">Schools</a>
+        </div>
+
+
+        <!--CONTENT-->
+        <div style="margin-top:3%;">
+            <div class="ui grid">
+                <div class="six wide column"></div>
+                <div class="three wide column">
+                    <div class="ui input">
+                        <input type="text" placeholder="Enter PSLE score">
+                    </div>
+                   
+                </div>
+                
+                <div class="four wide column">
+                    
+                        Distance(km): <span id="display-3"></span>
+                        
+                        <div class="ui range" id="range-2"></div>
+                  
+                        <!--<div class="ui input">
+                            
+                        </div>-->
+                 </div>
+                <div class="three wide column">
+                    <div class="ui floating labeled icon dropdown button">
+                        <i class="filter icon"></i>
+                        <span class="text">More Filters</span>
+                        <div class="menu">
+                            <div class="header">
+                                Search Issues
+                            </div>
+                            <div class="ui left icon input">
+                                <i class="search icon"></i>
+                                <input type="text" name="search" placeholder="Search...">
+                            </div>
+                            <div class="header" style="text-transform:none">
+                                <!--<i class="tags icon"></i>
+                                Filter by tag-->
+                                <h4>Mother Tongue</h4>
+                                <div class="ui checked checkbox">
+                                    <input type="checkbox" checked="">
+                                    <label>Chinese</label>
+                                </div>
+                                <div class="ui checked checkbox">
+                                    <input type="checkbox" checked="">
+                                    <label>Malay</label>
+                                </div>
+                                <div class="ui checked checkbox">
+                                    <input type="checkbox" checked="">
+                                    <label>Tamil</label>
+                                </div>
+
+                            </div>
+                            <!--<div class="divider"></div>-->
+                           
+                            <div class="item" style="visibility:hidden">
+                                <!--<div class="ui black empty circular label"></div>
+                                Discussion-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column"></div>
+                <div class="four wide column"></div>
+                <div class="four wide column"></div>
+                <div class="four wide column"></div>
+            </div>
+
+
+            <div class="ui unstackable items">
+                <div class="item">
+                    <div class="image">
+                        <a href="user_schools_detail.html"><img src="assets/schoollogo/catholicHigh.jpg" /></a>
+                    </div>
+                    <div class="content">
+                        <a class="header" href="user_schools_detail.html">Catholic High School</a>
+                        <div class="description">
+                            <p>9 BISHAN STREET 22</p>
+                            <p>579767</p>
+                        </div>
+                        <div class="extra">
+                            <a><i class="plus icon"></i> add to comparsion <br /></a>
+                            <a><i class="bookmark icon"></i> bookmark</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <a href="#"><img src="assets/schoollogo/andersonsecondary.jpg" /></a></div>
+                    <div class="content">
+                        <a class="header">Anderson Secondary</a>
+                        <div class="description">
+                            <p>10 ANG MO KIO STREET 53</p>
+                            <p>569206</p>
+                        </div>
+                        <div class="extra">
+                            <a><i class="plus icon"></i> add to comparsion <br /></a>
+                            <a><i class="bookmark icon"></i> bookmark</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</body>
+</html>
