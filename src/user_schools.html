@@ -69,6 +69,17 @@
                   $('#display-3').html(value);
               }
           });
+	  $('.browse')
+.popup({
+    inline: true,
+    position: 'bottom left',
+    on: 'click',
+    delay: {
+        show: 300,
+        hide: 800
+    }
+})
+        ;
           $('.ui.dropdown')
             .dropdown();
         })
@@ -134,7 +145,7 @@
 
                             </div>-->
                     </div>
-                    <div class="three wide column">
+                   <!-- <div class="three wide column">
                         <div class="ui labeled icon dropdown button">
                             <i class="filter icon"></i>
                             <span class="text">More Filters</span>
@@ -148,7 +159,7 @@
                                     <input type="text" name="search" placeholder="Search...">
                                 </div>
 
-                                <!--CCA drop down-->
+                                
                                 <div class="item">
                                     <i class="dropdown icon"></i>
                                     <div class="text">CCA</div>
@@ -165,8 +176,6 @@
                                 </select>
 
                                 <div class="header" style="text-transform:none">
-                                    <!--<i class="tags icon"></i>
-                                    Filter by tag-->
                                     <h4>Special Programme</h4>
                                     <div class="ui checked checkbox">
                                         <input type="checkbox" checked="">
@@ -192,15 +201,50 @@
                                     </div>
 
                                 </div>
-                                <!--<div class="divider"></div>-->
                                 <div class="item" style="visibility:hidden">
-                                    <!--<div class="ui black empty circular label"></div>
-                                    Discussion-->
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="four wide column"></div>
+                    </div> -->
+			
+			<!-- start here for filter -->
+                    <div class="three wide column">
+			<a class="browse item">
+                        <div class="ui labeled icon button">
+                            <i class="filter icon"></i>
+                            <span class="text browse item">More Filters</span>
+                        </div>
+                    </a>
+                    	<div class="ui fluid popup bottom left transition hidden">
+				<div class="ui one column relaxed divided grid">
+				    <div class="column">
+					<select class="ui fluid dropdown" multiple="">
+					    <option value="">CCA</option>
+					    <option value="AL">Alabama</option>
+					    <option value="AK">Alaska</option>
+					    <option value="AZ">Arizona</option>
+					    <option value="AR">Arkansas</option>
+
+					</select>
+					<h4>Mother Tongue</h4>
+					<div class="ui checked checkbox">
+					    <input type="checkbox" checked="">
+					    <label>Chinese</label>
+					</div>
+					<div class="ui checked checkbox">
+					    <input type="checkbox" checked="">
+					    <label>Malay</label>
+					</div>
+					<div class="ui checked checkbox">
+					    <input type="checkbox" checked="">
+					    <label>Tamil</label>
+					</div>
+
+				    </div>
+
+                       	 	</div>
+                    	</div>	
+		    </div>
                     <div class="four wide column"></div>
                     <div class="four wide column"></div>
                     <div class="four wide column"></div>
