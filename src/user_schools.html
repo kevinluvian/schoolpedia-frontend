@@ -15,7 +15,6 @@
                 margin-top: 3em;
             }
 
-
             .ui.container > h1 {
                 font-size: 3em;
                 text-align: center;
@@ -27,7 +26,6 @@
                 font-weight: normal;
                 margin: 4em 0em 3em;
             }
-
 
             .ui.table {
                 table-layout: fixed;
@@ -61,25 +59,26 @@
           });
             // Place value in an input
           $('#range-2').range({
-              min: 0,
-              max: 10,
-              start: 5,
+              min: 0.0,
+              max: 10.0,
+              start: 5.0,
               input: '#input-2',
               onChange: function (value) {
                   $('#display-3').html(value);
               }
           });
+
 	  $('.browse')
-.popup({
-    inline: true,
-    position: 'bottom left',
-    on: 'click',
-    delay: {
-        show: 300,
-        hide: 800
-    }
-})
-        ;
+    .popup({
+        inline: true,
+        position: 'bottom left',
+        on: 'click',
+        delay: {
+            show: 300,
+            hide: 800
+        }
+    })
+;
           $('.ui.dropdown')
             .dropdown();
         })
@@ -112,7 +111,6 @@
                             <button class="ui button">Search</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -127,55 +125,63 @@
             <!--CONTENT-->
             <div style="margin-top:3%;">
                 <div class="ui grid">
-                    <div class="six wide column"></div>
-                    <div class="three wide column">
+                    <div class="two wide column">
                         <div class="ui input">
                             <input type="text" placeholder="Enter PSLE score">
                         </div>
+                    </div>
+                    <div class="two wide column"></div>
 
+                    <div class="three wide column">
+                        <button class="ui button">Set Postal Code</button>
                     </div>
 
                     <div class="four wide column">
-
                             Distance(km): <span id="display-3"></span>
-
                             <div class="ui range" id="range-2"></div>
-
                             <!--<div class="ui input">
-
                             </div>-->
                     </div>
-                   <!-- <div class="three wide column">
-                        <div class="ui labeled icon dropdown button">
-                            <i class="filter icon"></i>
-                            <span class="text">More Filters</span>
-                            <div class="menu">
-                                <div class="header">
-                                    Search Issues
-                                </div>
 
-                                <div class="ui floating labeled icon dropdown button">
-                                    <i class="search icon"></i>
-                                    <input type="text" name="search" placeholder="Search...">
-                                </div>
+	    		    <!-- start here for filter -->
+                    <div class="five wide column">
+			            <a class="browse item">
+                            <div class="ui labeled icon button">
+                                <i class="filter icon"></i>
+                                <span class="text browse item">More Filters</span>
+                            </div>
+                        </a>
 
-                                
-                                <div class="item">
-                                    <i class="dropdown icon"></i>
-                                    <div class="text">CCA</div>
-                                    <div class="menu">
-                                        <div class="item">Basketball</div>
-                                        <div class="item">Netball</div>
+                        <div class="ui fluid popup bottom right transition hidden">
+			                <div class="ui one column relaxed divided grid">
+				                <div class="column">
+
+                                    <h4>Zone</h4>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>North</label>
                                     </div>
-                                </div>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>South</label>
+                                    </div>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>East</label>
+                                    </div>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>West</label>
+                                    </div>
 
-                                <div class="ui sub header">Selection</div>
-                                <select multiple="" name="skills" class="ui fluid normal dropdown">
-                                    <option value="">Skills</option>
-                                    <option value="angular">Angular</option>
-                                </select>
+					                <select class="ui fluid dropdown" multiple="">
+					                    <option value="">CCA</option>
+					                    <option value="Basketball">Basketball</option>
+					                    <option value="NPCC">NPCC</option>
+					                    <option value="NCC">NCC</option>
+					                    <option value="Red Cross">Red Cross</option>
+					                </select>
 
-                                <div class="header" style="text-transform:none">
                                     <h4>Special Programme</h4>
                                     <div class="ui checked checkbox">
                                         <input type="checkbox" checked="">
@@ -186,70 +192,42 @@
                                         <label>SAP</label>
                                     </div>
 
-                                    <h4>Mother Tongue</h4>
-                                    <div class="ui checked checkbox">
-                                        <input type="checkbox" checked="">
-                                        <label>Chinese</label>
-                                    </div>
-                                    <div class="ui checked checkbox">
-                                        <input type="checkbox" checked="">
-                                        <label>Malay</label>
-                                    </div>
-                                    <div class="ui checked checkbox">
-                                        <input type="checkbox" checked="">
-                                        <label>Tamil</label>
-                                    </div>
+					                <h4>Mother Tongue</h4>
+					                <div class="ui checked checkbox">
+					                    <input type="checkbox" checked="">
+					                    <label>Chinese</label>
+					                </div>
+					                <div class="ui checked checkbox">
+					                    <input type="checkbox" checked="">
+					                    <label>Malay</label>
+					                </div>
+					                <div class="ui checked checkbox">
+					                    <input type="checkbox" checked="">
+					                    <label>Tamil</label>
+					                </div>
 
-                                </div>
-                                <div class="item" style="visibility:hidden">
-                                </div>
+                                    <h4>Stream</h4>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>Express</label>
+                                    </div>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>Normal Academic</label>
+                                    </div>
+                                    <div class="ui checked checkbox">
+                                        <input type="checkbox" checked="">
+                                        <label>Normal Technical</label>
+                                    </div>
+				                </div>
                             </div>
-                        </div>
-                    </div> -->
-			
-			<!-- start here for filter -->
-                    <div class="three wide column">
-			<a class="browse item">
-                        <div class="ui labeled icon button">
-                            <i class="filter icon"></i>
-                            <span class="text browse item">More Filters</span>
-                        </div>
-                    </a>
-                    	<div class="ui fluid popup bottom left transition hidden">
-				<div class="ui one column relaxed divided grid">
-				    <div class="column">
-					<select class="ui fluid dropdown" multiple="">
-					    <option value="">CCA</option>
-					    <option value="AL">Alabama</option>
-					    <option value="AK">Alaska</option>
-					    <option value="AZ">Arizona</option>
-					    <option value="AR">Arkansas</option>
-
-					</select>
-					<h4>Mother Tongue</h4>
-					<div class="ui checked checkbox">
-					    <input type="checkbox" checked="">
-					    <label>Chinese</label>
-					</div>
-					<div class="ui checked checkbox">
-					    <input type="checkbox" checked="">
-					    <label>Malay</label>
-					</div>
-					<div class="ui checked checkbox">
-					    <input type="checkbox" checked="">
-					    <label>Tamil</label>
-					</div>
-
-				    </div>
-
-                       	 	</div>
-                    	</div>	
-		    </div>
+                        </div>	
+		            </div>
+                    <!--???-->
                     <div class="four wide column"></div>
                     <div class="four wide column"></div>
                     <div class="four wide column"></div>
                 </div>
-
 
                 <div class="ui unstackable items">
                     <div class="item">
@@ -270,7 +248,8 @@
                     </div>
                     <div class="item">
                         <div class="image">
-                            <a href="#"><img src="assets/schoollogo/andersonsecondary.jpg" /></a></div>
+                            <a href="#"><img src="assets/schoollogo/andersonsecondary.jpg"></a>
+                        </div>
                         <div class="content">
                             <a class="header">Anderson Secondary</a>
                             <div class="description">
@@ -283,19 +262,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
-              </div>
-            </div>
+                    <div class="item">
+                        <div class="image">
+                            <a href="#"><img src="assets/schoollogo/andersonsecondary.jpg"></a>
+                        </div>
+                        <div class="content">
 
-            <!--page navigation bar-->
-            <div class="ui borderless menu">
-                <a class="item" href="user_schools_detail.html">1</a>
-                <a class="item">2</a>
-                <a class="item">3</a>
-                <a class="item">4</a>
-                <a class="item">5</a>
-                <a class="item">6</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
     </body>
 </html>
