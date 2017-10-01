@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title>SchoolPedia</title>
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <link href="semantic.css" rel="stylesheet" />
+    <script src="semantic.js"></script>
+    <script src="package.js"></script>
+
+    <style type="text/css">
+        body > .ui.container {
+            margin-top: 3em;
+        }
+
+        
+        .ui.container > h1 {
+            font-size: 3em;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .ui.container > h2.dividing.header {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 4em 0em 3em;
+        }
+
+
+        .ui.table {
+            table-layout: fixed;
+        }
+        .ui.cards > .card{
+            width: 270px;
+        }
+    </style>
+    <!--- Example Javascript -->
+    <script>
+  $(document)
+    .ready(function() {
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+      $('.ui.menu a.item')
+        .on('click', function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active')
+          ;
+        })
+      ;
+      $('.special.cards .image').dimmer({
+          on: 'hover'
+      });
+    })
+        ;
+
+  
+    </script>
+</head>
+<body>
+    <div class="ui container">
+
+        <!--HEADER MENU-->
+        <div class="ui secondary menu">
+            <a href="user_home.html"><img src="assets/logo/schoolpedialogo.png" height="60" /></a>
+            <!--<div class="active item">Home</div>-->
+            <a class="item" href="user_schools.html">Schools</a>
+            <a class="item" href="#">Bookmark</a>
+            <a class="active item" href="user_compare_school.html">Comparison</a>
+            <a class="item" href="#">FAQ</a>
+            <a class="item" href="#">Contact Us</a>
+            <!--<a class="item inverted">Login</a>-->
+            <div class="item">
+                <a class="ui primary button" href="login.html">Login</a>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui action left icon input">
+                        <i class="search icon"></i>
+                        <input type="text" placeholder="Enter school">
+                        <button class="ui button">Search</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Breadcrumb-->
+        <div class="ui breadcrumb" style="margin-top:2%;width:80%">
+            <a class="section">Home</a>
+            <div class="divider"> / </div>
+            <a class="active section">Comparison</a>
+        </div>
+        
+        
+        <!--CONTENT-->
+        <div style="margin-top:5%;">
+                <div class="ui special cards">
+                    <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">Bookmark</div>
+                                    </div>
+                                </div>
+                            </div>
+                                <img src="assets/schoollogo/catholicHigh.jpg" />
+                        </div>
+                        <div class="content">
+                            <a class="header">Catholic High School</a>
+                            <div class="meta">
+                                <span class="date">Details of school</span>
+                            </div>
+                        </div>
+                        <!--<div class="extra content">
+                            <a>
+                                <i class="plus icon"></i>
+                                Add to comparison
+                            </a>
+                        </div>-->
+                    </div>
+                    <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui inverted dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui primary button">Bookmark</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="assets/schoollogo/andersonsecondary.jpg" />
+                        </div>
+                        <div class="content">
+                            <a class="header">Anderson Secondary School</a>
+                            <div class="meta">
+                                <span class="date">Details of school</span>
+                            </div>
+                        </div>
+                        <!--<div class="extra content">
+                            <a>
+                                <i class="plus icon"></i>
+                                Add to comparison
+                            </a>
+                        </div>-->
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+</body>
+</html>
