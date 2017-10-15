@@ -135,35 +135,64 @@
             </div>
         </div>
         <!--CONTENT STARTS HERE-->
-        <p>Please contact us by filling up the enquiry form or using the live chat feature provided below</p>
-        <div class="ui middle aligned center aligned grid" style="margin-top:20px">
-            <div class="column">
-                <h2 class="ui teal image header">
-                    <div class="content">Contact Us</div>
-                </h2>
-                <form class="ui large form">
-                    <div class="ui stacked segment">
-                        <div class="required field">
-                            <label style="text-align:left">Name</label>
-                            <input name="name" type="text" placeholder="Name" />
+         <div class="ui grid" style="margin-top:5%">
+                    <div class="eleven wide column">
+                      
+                        <form class="ui large form">
                             
-                        <div class="field required">
-                            <label style="text-align:left">Email Address</label>
-                            <input type="text" name="email" placeholder="E-mail address"/>
-                        </div>
+                            <div class="ui stacked segment">
+                                <h2>Contact Us</h2>
+                                <!--<h4>We are here to answer any questions you might have about our services.<br /> Reach out to us and we'll response as soon as we can.</h4>-->
+                                <div class="ui required field">
+                                    <label style="text-align:left">Name</label>
+                                    <div class="two fields">
+                                        <div class="ui field">
+                                            <input name="name" type="text" placeholder="First Name" />
+                                        </div>
+                                        <div class="ui field">
+                                            <input name="name" type="text" placeholder="Last Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field required">
+                                    <label style="text-align:left">Email</label>
+                                    <div class="ui left icon input">
+                                        <i class="user icon"></i>
+                                        <input type="email" name="email" placeholder="E-mail address">
+                                    </div>
+                                </div>
+                                <div class="ui required field">
+                                    <label style="text-align:left">Message</label>
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                               
+                                <div class="field">
 
-                        <div class="field required">
-                            <label style="text-align:left">Message</label>
-                            <textarea rows ="5" name="message" placeholder="Message"></textarea>
-                        </div>
 
-                        <div class="item">
-                             <div class="ui fluid large teal submit button">Submit</div>
-                        </div>
-                         <div class="ui error message"></div>
+                                    <div class="ui primary submit button">Submit</div>
+                                </div>
+
+                                <div class="ui error message"></div>
+                            </div>
+                        </form>
+                       
                     </div>
-                </form>
-            </div>
+                    <div class="five wide icon column"> 
+                        <!--<h3 class="header">Telephone</h3>-->
+                        <h4><i class="phone icon"></i><b>Telephone</b>: +65 6293 9128</h4>
+                        <h4><i class="mail icon"></i><b>Email</b>: enquiry@schoolpedia.sg</h4>
+                        <button class="ui facebook button">
+                            <i class="facebook icon"></i>
+                            Facebook
+                        </button>
+                        <button class="ui twitter button">
+                            <i class="twitter icon"></i>
+                            Twitter
+                        </button>
+                    </div>
+                  
+                </div>
+
         </div>
 </body>
 </html>
