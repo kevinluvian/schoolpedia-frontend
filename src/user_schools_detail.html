@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
     <title>SchoolPedia</title>
 	<meta charset="utf-8" />
@@ -15,7 +15,6 @@
             margin-top: 3em;
         }
 
-        
         .ui.container > h1 {
             font-size: 3em;
             text-align: center;
@@ -28,30 +27,46 @@
             margin: 4em 0em 3em;
         }
 
-
         .ui.table {
             table-layout: fixed;
+        }
+
+        p.one {
+            border-style: solid;
+            border-width: 5px;
+        }
+
+        .rating.largetext {
+            font-size: 3em;
         }
     </style>
     <!--- Example Javascript -->
     <script>
-  $(document)
-    .ready(function() {
-      $('.ui.menu .ui.dropdown').dropdown({
-        on: 'hover'
-      });
-      $('.ui.menu a.item')
-        .on('click', function() {
-          $(this)
-            .addClass('active')
-            .siblings()
-            .removeClass('active')
+      $(document)
+        .ready(function() {
+          $('.ui.menu .ui.dropdown').dropdown({
+            on: 'hover'
+          });
+          $('.ui.menu a.item')
+            .on('click', function() {
+              $(this)
+                .addClass('active')
+                .siblings()
+                .removeClass('active')
+              ;
+            })
           ;
         })
-      ;
-    })
-  ;
+        ;
     </script>
+
+    <!--rating script-->
+    <script>
+        $(document).ready(function () {
+            $('.ui.star.rating').rating();
+        });
+    </script>
+
 </head>
 <body>
     <div class="ui container">
@@ -119,18 +134,66 @@
                         <p>Vice Principal: MISS HO PING PING</p>
                         <p>Vice Principal: MR TAN PERRY</p>
                     </div>
-                    <div class="four wide column"></div>
-                    <div class="four wide column"></div>
-                    <div class="four wide column"></div>
-                    <div class="four wide column"></div>
-                    <div class="four wide column"></div>
-                    <div class="four wide column"></div>
+                </div>
+                
+                <h2>Reviews/ Comments</h2>
+                <div class="ui grid centered" style="margin-top:5%">
+                    <div class="ui segment">
+                        <p>Overall rating</p>
+                        <div class="rating largetext">3.0</div>
+                        <br />
+                        <div class="ui star rating" data-rating="3" data-max-rating="5"></div>
+                    </div>
+
+                </div>
+
+                <div class="ui grid" style="margin-top:5%">
+                    <div class="left aligned eight wide column">
+                        <div class="ui segment">
+                            <div class="ui comments">
+                                <div class="comment">
+                                    <div class="content">
+                                        <a class="author">Jack</a>
+                                        <div class="text">It was good like really</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="left aligned eight wide column">
+                        <div class="ui segment">
+                            <div class="ui comments">
+                                <div class="comment">
+                                    <div class="content">
+                                        <a class="author">Jackie</a>
+                                        <div class="text">It was good like really</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- message box -->
+                <div class="ui grid" style="margin-top:5%">
+                    <div class="sixteen wide column">
+                        <form class="ui large form">
+                            <div class="ui stacked segment">
+                                <div class="ui field">
+                                    <h3 style="text-align:center">Comment</h3>
+                                    <div class="ui star rating" data-rating="3" data-max-rating="5"></div>
+                                    <br />
+                                    <br />
+                                    <textarea name="comment" placeholder="Comment" rows="4"></textarea>
+                                </div>
+                                <button class="ui button" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
         </center>
-
-        
     </div>
 </body>
 </html>
