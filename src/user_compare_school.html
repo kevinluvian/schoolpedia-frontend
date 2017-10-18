@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
     <title>SchoolPedia</title>
 	<meta charset="utf-8" />
@@ -14,7 +14,6 @@
         body > .ui.container {
             margin-top: 3em;
         }
-
         
         .ui.container > h1 {
             font-size: 3em;
@@ -28,7 +27,6 @@
             margin: 4em 0em 3em;
         }
 
-
         .ui.table {
             table-layout: fixed;
         }
@@ -38,6 +36,10 @@
     </style>
     <!--- Example Javascript -->
     <script>
+        $(document).ready(function () {
+            $('.ui.dropdown').dropdown();
+        });
+
   $(document)
     .ready(function() {
       $('.ui.menu .ui.dropdown').dropdown({
@@ -91,14 +93,166 @@
 
         <!--Breadcrumb-->
         <div class="ui breadcrumb" style="margin-top:2%;width:80%">
-            <a class="section">Home</a>
+            <a class="section" href="user_home.html">Home</a>
             <div class="divider"> / </div>
             <a class="active section">Comparison</a>
         </div>
         
         
         <!--CONTENT-->
-        <div style="margin-top:5%;">
+        <div style="margin-top:5%">
+            <div class="ui grid">
+                <div class="two wide column center aligned">
+                    <p>School #1</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #1</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column"></div>
+                <div class="two wide column center aligned">
+                    <p>School #4</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #4</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui grid">
+                <div class="two wide column center aligned">
+                    <p>School #2</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #2</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column"></div>
+                <div class="two wide column center aligned">
+                    <p>School #5</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #5</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui grid">
+                <div class="two wide column center aligned">
+                    <p>School #3</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #3</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column"></div>
+                <div class="two wide column center aligned">
+                    <p>School #6</p>
+                </div>
+                <div class="three wide column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="school" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select School #6</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">Catholic High School</div>
+                            <div class="item" data-value="0">Anderson Secondary School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="ui celled padded table">
+            <thead>
+                <tr>
+                    <th class="single line"></th>
+                    <th>School #1</th>
+                    <th>School #2</th>
+                    <th>School #3</th>
+                    <th>School #4</th>
+                    <th>School #5</th>
+                    <th>School #6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><b>Distance from Nearest MRT</b></p>
+                    </td>
+                    <td class="single line">Power Output</td>
+                    <td class="single line">B</td>
+                    <td class="single line">C</td>
+                    <td class="single line">D</td>
+                    <td class="single line">E</td>
+                    <td class="single line">F</td>
+                </tr>
+
+                <tr>
+                    <td><b>PSLE Score Entry</b></p>
+                    </td>
+                    <td class="multiple lines">
+                        <p>Express: </p>
+                        <p>Normal Academic: </p>
+                        <p>Normal Technical: </p>
+                    </td>
+                    <td class="single line">B</td>
+                    <td class="single line">C</td>
+                    <td class="single line">D</td>
+                    <td class="single line">E</td>
+                    <td class="single line">F</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><b>Average number of teachers per class</b></p>
+                    </p>
+                    <td class="single line">0.5</td>
+                    <td class="single line">B</td>
+                    <td class="single line">C</td>
+                    <td class="single line">D</td>
+                    <td class="single line">E</td>
+                    <td class="single line">F</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<div style="margin-top:5%;">
                 <div class="ui special cards">
                     <div class="card">
                         <div class="blurring dimmable image">
@@ -117,12 +271,6 @@
                                 <span class="date">Details of school</span>
                             </div>
                         </div>
-                        <!--<div class="extra content">
-                            <a>
-                                <i class="plus icon"></i>
-                                Add to comparison
-                            </a>
-                        </div>-->
                     </div>
                     <div class="card">
                         <div class="blurring dimmable image">
@@ -141,17 +289,16 @@
                                 <span class="date">Details of school</span>
                             </div>
                         </div>
-                        <!--<div class="extra content">
+                        <div class="extra content">
                             <a>
                                 <i class="plus icon"></i>
                                 Add to comparison
                             </a>
-                        </div>-->
+                        </div>
                     </div>
-                    
-                   
+
                 </div>
-            </div>
+            </div>-->
         </div>
 </body>
 </html>
