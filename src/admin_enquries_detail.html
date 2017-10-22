@@ -1,14 +1,226 @@
 <html>
-  <head>
-  </head>
-  <body>
-    <table border="1">
-      <tbody>
-        <tr>
-          <td>hello</td>
-          <td>world</td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <link href="semantic.css" rel="stylesheet" />
+    <script src="semantic.js"></script>
+    <script src="package.js"></script>
+    <script src="components/tablesort.js"></script>
+
+    <!--<script>
+        $(document).ready(function () {
+            // All your normal JS code goes in here
+            $('table').tablesort()
+        });
+    </script>-->
+    <script>
+    $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            name: {
+             identifier: 'name',
+             rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter your name'
+                  }
+                ]
+              },
+            message: {
+                identifier : 'message',
+                rules: [
+                    {
+                        type : 'empty',
+                        prompt : 'Please enter your message'
+                    }
+                    ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+    </script>
+   
+
+</head>
+<body>
+
+    <div class="ui inverted huge borderless fixed fluid menu">
+        <a class="header item">SchoolPedia</a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui small input">
+                    <input placeholder="Search..." />
+                </div>
+            </div>
+            <a class="item">Logout</a>
+        </div>
+    </div>
+    <div class="ui grid">
+        <div class="row">
+            <div class="column" id="sidebar">
+                <div class="ui secondary vertical fluid menu">
+                    <a class="item">Overview</a><a href="admin_users.html" class="item">Users</a><a href="admin_enquries.html" class="active item">Enquiries</a><a class="item">Schools</a>
+                    <a class="item">Reports</a>
+                    <!--<div class="ui hidden divider"></div>
+                <a class="item">Nav item</a><a class="item">Nav item again</a><a class="item">One more nav</a><a class="item">Another nav item</a><a class="item">More navigation</a>
+                <div class="ui hidden divider"></div>-->
+                </div>
+            </div>
+            
+          
+
+                        <div class="column" id="content">
+                            <div class="ui grid">
+                                <div class="row">
+                                    <div class="ui breadcrumb">
+                                        <a class="section" href="admin_enquries.html">Enquries</a>
+                                        <div class="divider"> / </div>
+                                        <div class="active section">Enquiry Detail</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="ui huge header">
+                                        Enquiry
+                                    </h1>
+                                </div>
+                                <div class="ui divider"></div>
+                                <div class="two column aligned row">
+                                    <div class="column">
+
+                                        <form class="ui large form">
+
+                                            <div class="ui stacked segment">
+                                                <h2>Enquiry Form</h2>
+                                                <div class="ui field">
+                                                    <label style="text-align:left">Name</label>
+                                                    <div class="two fields">
+                                                        <div class="field">
+                                                            <input name="name" type="text" placeholder="First Name" readonly value="Albert" />
+                                                        </div>
+                                                        <div class="ui field">
+                                                            <input name="name" type="text" placeholder="Last Name" readonly value="Tan" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="field required">
+                                                    <label style="text-align:left">Email</label>
+                                                    <div class="ui left icon input">
+                                                        <i class="user icon"></i>
+                                                        <input type="email" name="email" placeholder="E-mail address" readonly value="albert93@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="ui required field">
+                                                    <label style="text-align:left">Message</label>
+                                                    <textarea placeholder="Message" readonly>Message for you</textarea>
+                                                </div>
+
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                    <div class="column">
+                                        <form class="ui large form">
+
+                                            <div class="ui stacked segment">
+                                                <h2>Reply</h2>
+                                                <div class="ui required field">
+                                                    <label style="text-align:left">Message</label>
+                                                    <textarea name="message" placeholder="Message"></textarea>
+                                                </div>
+
+                                                <div class="field">
+                                                    <div class="ui primary submit button">Reply</div>
+                                                </div>
+
+                                                <div class="ui error message"></div>
+
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style type="text/css">
+                    body {
+                        display: relative;
+                    }
+
+                    #sidebar {
+                        position: fixed;
+                        top: 51.8px;
+                        left: 0;
+                        bottom: 0;
+                        width: 18%;
+                        background-color: #f5f5f5;
+                        padding: 0px;
+                    }
+
+                        #sidebar .ui.menu {
+                            margin: 2em 0 0;
+                            font-size: 16px;
+                        }
+
+                            #sidebar .ui.menu > a.item {
+                                color: #337ab7;
+                                border-radius: 0 !important;
+                            }
+
+                                #sidebar .ui.menu > a.item.active {
+                                    background-color: #337ab7;
+                                    color: white;
+                                    border: none !important;
+                                }
+
+                                #sidebar .ui.menu > a.item:hover {
+                                    background-color: #4f93ce;
+                                    color: white;
+                                }
+
+                    #content {
+                        margin-left: 19%;
+                        width: 81%;
+                        margin-top: 3em;
+                        padding-left: 3em;
+                        float: left;
+                    }
+
+                        #content > .ui.grid {
+                            padding-right: 4em;
+                            padding-bottom: 3em;
+                        }
+
+                        #content h1 {
+                            font-size: 36px;
+                        }
+
+                        #content .ui.divider:not(.hidden) {
+                            margin: 0;
+                        }
+
+                        #content table.ui.table {
+                            border: none;
+                        }
+
+                            #content table.ui.table thead th {
+                                border-bottom: 2px solid #eee !important;
+                            }
+                </style>
+
+
+</body>
 </html>
